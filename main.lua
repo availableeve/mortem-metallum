@@ -3,7 +3,14 @@ local UserInputService = game:GetService("UserInputService")
 local player = game.Players.LocalPlayer
 local walkspeed = 16
 local increasedWalkspeed = 24.11
-
+local w = {
+    "C4",
+    "",
+    "",
+    "",
+    "",
+    
+}
 -- functions
 local function onKey2Press(input)
     if input.KeyCode == Enum.KeyCode.LeftControl then
@@ -19,7 +26,7 @@ end
 
 local function onKeyPress(input)
     if input.KeyCode == Enum.KeyCode.P then
-        for _ = 1, 50 do
+        for _ = 1, 80 do
             local args = {
                 [1] = 0,
                 [2] = "0:0:0:0"
@@ -39,7 +46,7 @@ local function onKey1Press(input)
         local backpack = player:FindFirstChild("Backpack")
         if backpack then
             for _, item in pairs(backpack:GetChildren()) do
-                if item:IsA("Tool") and not table.find(theseones, item.Name) then
+                if item:IsA("Tool") and not table.find(w, item.Name) then
                     item:Destroy()
                 end
             end
