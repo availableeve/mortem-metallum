@@ -1,5 +1,5 @@
 local function onKey1Press(input)
-    if input.KeyCode == Enum.KeyCode.Delete then
+    if input.KeyCode == Enum.KeyCode.O then
         local backpack = player:FindFirstChild("Backpack")
         if backpack then
             for _, item in pairs(backpack:GetChildren()) do
