@@ -26,7 +26,7 @@ end
 
 local function onKeyPress(input)
     if input.KeyCode == Enum.KeyCode.P then
-        for _ = 1, 80 do
+        for _ = 1, 30 do
             local args = {
                 [1] = 0,
                 [2] = "0:0:0:0"
