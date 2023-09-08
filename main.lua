@@ -25,6 +25,21 @@ local function dupe(input)
 		
     end
 end
+
+-- destroy items
+local function destroy(input)
+    if input.KeyCode == Enum.KeyCode.J then
+        local backpack = player:FindFirstChild("Backpack")
+        if backpack then
+            for _, item in pairs(backpack:GetChildren()) do
+                if item:IsA("Tool") and item.Name ~= "C4" then
+                    item:Destroy()
+                end
+            end
+        end
+    end
+end
+
 -- walkspeed
 local function walkspeed24(input)
     if input.KeyCode == Enum.KeyCode.LeftControl then
@@ -37,13 +52,15 @@ local function walkspeed16(input)
         player.Character:FindFirstChild("Humanoid").WalkSpeed = 16
     end
 end
-
 -- walkspeed
 UserInputService.InputBegan:Connect(walkspeed24)
 UserInputService.InputEnded:Connect(walkspeed16)
 
 -- dupe
 UserInputService.InputBegan:Connect(dupe)
+
+-- destroy
+UserInputService.InputBegan:Connect(destroy)
 
 -- jumpcooldown
 for _, player in pairs(players) do
