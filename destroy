@@ -11,4 +11,4 @@ local function onKey1Press(input)
     end
 end
 
-UserInputService.InputBegan:Connect(onKeyPress)
+UserInputService.InputBegan:Connect(onKey1Press)
