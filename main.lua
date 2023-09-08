@@ -1,9 +1,10 @@
+-- variables
 local UserInputService = game:GetService("UserInputService")
 local player = game.Players.LocalPlayer
-
 local walkspeed = 16
 local increasedWalkspeed = 24.11
 
+-- functions
 local function onKey2Press(input)
     if input.KeyCode == Enum.KeyCode.LeftControl then
         player.Character:FindFirstChild("Humanoid").WalkSpeed = increasedWalkspeed
@@ -15,9 +16,6 @@ local function onKey2Release(input)
         player.Character:FindFirstChild("Humanoid").WalkSpeed = walkspeed
     end
 end
-
-UserInputService.InputBegan:Connect(onKey2Press)
-UserInputService.InputEnded:Connect(onKey2Release)
 
 local function onKeyPress(input)
     if input.KeyCode == Enum.KeyCode.P then
@@ -36,8 +34,6 @@ local function onKeyPress(input)
     end
 end
 
-UserInputService.InputBegan:Connect(onKeyPress)
-
 local function onKey1Press(input)
     if input.KeyCode == Enum.KeyCode.O then
         local backpack = player:FindFirstChild("Backpack")
@@ -51,4 +47,7 @@ local function onKey1Press(input)
     end
 end
 
+UserInputService.InputBegan:Connect(onKeyPress)
 UserInputService.InputBegan:Connect(onKey1Press)
+UserInputService.InputBegan:Connect(onKey2Press)
+UserInputService.InputEnded:Connect(onKey2Release)
