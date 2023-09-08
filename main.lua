@@ -4,7 +4,7 @@ local player = game.Players.LocalPlayer
 local walkspeed = 16
 local increasedWalkspeed = 24.11
 local w = {
-    "C4",
+    "Fire bomb",
     "",
     "",
     "",
