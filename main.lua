@@ -17,13 +17,13 @@ local function onKey2Press(input)
         player.Character:FindFirstChild("Humanoid").WalkSpeed = increasedWalkspeed
     end
 end
-
+UserInputService.InputBegan:Connect(onKey2Press)
 local function onKey2Release(input)
     if input.KeyCode == Enum.KeyCode.LeftControl then
         player.Character:FindFirstChild("Humanoid").WalkSpeed = walkspeed
     end
 end
-
+UserInputService.InputEnded:Connect(onKey2Release)
 local function onKeyPress(input)
     if input.KeyCode == Enum.KeyCode.P then
         for _ = 1, 30 do
@@ -40,7 +40,7 @@ local function onKeyPress(input)
         end
     end
 end
-
+UserInputService.InputBegan:Connect(onKeyPress)
 local function onKey1Press(input)
     if input.KeyCode == Enum.KeyCode.O then
         local backpack = player:FindFirstChild("Backpack")
@@ -54,7 +54,4 @@ local function onKey1Press(input)
     end
 end
 
-UserInputService.InputBegan:Connect(onKeyPress)
 UserInputService.InputBegan:Connect(onKey1Press)
-UserInputService.InputBegan:Connect(onKey2Press)
-UserInputService.InputEnded:Connect(onKey2Release)
