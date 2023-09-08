@@ -1,22 +1,27 @@
 local players = game:GetService("Players"):GetPlayers()
 local UserInputService = game:GetService("UserInputService")
 local player = game.Players.LocalPlayer
-local w = {"Fire bomb"}
+local w = {
+    "Fire bomb"
+}
 --functions
 --dupe
 local function dupe(input)
     
-    if input.KeyCode == Enum.KeyCode.K then
+    if input.KeyCode == Enum.KeyCode.P then
 		
         for _ = 1, 30 do
-		game:GetService("ReplicatedStorage").Item:FireServer(0, "0:0:0:0")	
+            local ohNumber1 = 16
+		    local ohString2 = "0:0:0:0"
+
+		    game:GetService("ReplicatedStorage").Item:FireServer(ohNumber1, ohString2)
 		
     end
 end
 
 -- destroy items
 local function destroy(input)
-    if input.KeyCode == Enum.KeyCode.J then
+    if input.KeyCode == Enum.KeyCode.O then
         local backpack = player:FindFirstChild("Backpack")
         if backpack then
             for _, item in pairs(backpack:GetChildren()) do
