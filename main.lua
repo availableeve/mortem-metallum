@@ -1,9 +1,6 @@
 local players = game:GetService("Players"):GetPlayers()
 local UserInputService = game:GetService("UserInputService")
 local player = game.Players.LocalPlayer
-local wae = {
-    "Fire bomb"
-}
 
 local function dupe(input)
     if input.KeyCode == Enum.KeyCode.P then
@@ -20,7 +17,7 @@ local function destroy(input)
         local backpack = player:FindFirstChild("Backpack")
         if backpack then
             for _, item in pairs(backpack:GetChildren()) do
-                if item:IsA("Tool") and table.find(wae, item.Name)
+                if item:IsA("Tool") and item.Name ~= "Fire bomb" do
                     item:Destroy()
                 end
             end
