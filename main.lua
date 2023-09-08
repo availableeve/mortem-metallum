@@ -1,3 +1,5 @@
 loadstring(game:HttpGet('https://raw.githubusercontent.com/availableeve/mortem-metallum/main/destroy.lua'))()
+wait(0.2)
 loadstring(game:HttpGet('https://raw.githubusercontent.com/availableeve/mortem-metallum/main/sprint.lua'))()
+wait(0.2)
 loadstring(game:HttpGet('https://raw.githubusercontent.com/availableeve/mortem-metallum/main/dupe.lua'))()
