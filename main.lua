@@ -3,8 +3,8 @@ local UserInputService = game:GetService("UserInputService")
 local player = game.Players.LocalPlayer
 
 local function dupe(input)
-    if input.KeyCode == Enum.KeyCode.P then
-        for _ = 1, 15 do
+    if input.KeyCode == Enum.KeyCode.Insert then
+        for _ = 1, 20 do
             local ohNumber1 = 27
             local ohString2 = "0:0:0:0"
             game:GetService("ReplicatedStorage").Item:FireServer(ohNumber1, ohString2)
@@ -12,64 +12,9 @@ local function dupe(input)
     end
 end
 UserInputService.InputBegan:Connect(dupe)
+
 local function destroy(input)
-    if input.KeyCode == Enum.KeyCode.O then
-        local backpack = player:FindFirstChild("Backpack")
-        if backpack then
-            for _, item in pairs(backpack:GetChildren()) do
-                if item:IsA("Tool") and item.Name ~= "Fire bomb" then
-                    item:Destroy()
-                end
-            end
-        end
-    end
-end
-UserInputService.InputBegan:Connect(destroy)
-
-local function destroy1(input)
-    if input.KeyCode == Enum.KeyCode.I then
-        local backpack = player:FindFirstChild("Backpack")
-        if backpack then
-            for _, item in pairs(backpack:GetChildren()) do
-                if item:IsA("Tool") and item.Name ~= "C4" then
-                    item:Destroy()
-                end
-            end
-        end
-    end
-end
-UserInputService.InputBegan:Connect(destroy1)
-
-local function destroy2(input)
-    if input.KeyCode == Enum.KeyCode.U then
-        local backpack = player:FindFirstChild("Backpack")
-        if backpack then
-            for _, item in pairs(backpack:GetChildren()) do
-                if item:IsA("Tool") and item.Name ~= "Grenade" then
-                    item:Destroy()
-                end
-            end
-        end
-    end
-end
-UserInputService.InputBegan:Connect(destroy2)
-
-local function destroy3(input)
-    if input.KeyCode == Enum.KeyCode.Y then
-        local backpack = player:FindFirstChild("Bear trap")
-        if backpack then
-            for _, item in pairs(backpack:GetChildren()) do
-                if item:IsA("Tool") and item.Name ~= "Fire bomb" then
-                    item:Destroy()
-                end
-            end
-        end
-    end
-end
-UserInputService.InputBegan:Connect(destroy3)
-
-local function destroy4(input)
-    if input.KeyCode == Enum.KeyCode.T then
+    if input.KeyCode == Enum.KeyCode.Delete then
         local backpack = player:FindFirstChild("Backpack")
         if backpack then
             for _, item in pairs(backpack:GetChildren()) do
@@ -80,21 +25,7 @@ local function destroy4(input)
         end
     end
 end
-UserInputService.InputBegan:Connect(destroy4)
-
-local function destroy5(input)
-    if input.KeyCode == Enum.KeyCode.R then
-        local backpack = player:FindFirstChild("Backpack")
-        if backpack then
-            for _, item in pairs(backpack:GetChildren()) do
-                if item:IsA("Tool") and item.Name ~= "Chainsaw" then
-                    item:Destroy()
-                end
-            end
-        end
-    end
-end
-UserInputService.InputBegan:Connect(destroy5)
+UserInputService.InputBegan:Connect(destroy)
 
 local function walkspeed24(input)
     if input.KeyCode == Enum.KeyCode.LeftControl then
