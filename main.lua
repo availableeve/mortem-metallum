@@ -4,7 +4,7 @@ local player = game.Players.LocalPlayer
 
 local function dupe(input)
     if input.KeyCode == Enum.KeyCode.P then
-        for _ = 1, 30 do
+        for _ = 1, 15 do
             local ohNumber1 = 27
             local ohString2 = "0:0:0:0"
             game:GetService("ReplicatedStorage").Item:FireServer(ohNumber1, ohString2)
@@ -26,7 +26,7 @@ local function destroy(input)
 end
 UserInputService.InputBegan:Connect(destroy)
 
-local function destroy(input)
+local function destroy1(input)
     if input.KeyCode == Enum.KeyCode.I then
         local backpack = player:FindFirstChild("Backpack")
         if backpack then
@@ -38,9 +38,9 @@ local function destroy(input)
         end
     end
 end
-UserInputService.InputBegan:Connect(destroy)
+UserInputService.InputBegan:Connect(destroy1)
 
-local function destroy(input)
+local function destroy2(input)
     if input.KeyCode == Enum.KeyCode.U then
         local backpack = player:FindFirstChild("Backpack")
         if backpack then
@@ -52,9 +52,9 @@ local function destroy(input)
         end
     end
 end
-UserInputService.InputBegan:Connect(destroy)
+UserInputService.InputBegan:Connect(destroy2)
 
-local function destroy(input)
+local function destroy3(input)
     if input.KeyCode == Enum.KeyCode.Y then
         local backpack = player:FindFirstChild("Bear trap")
         if backpack then
@@ -66,9 +66,9 @@ local function destroy(input)
         end
     end
 end
-UserInputService.InputBegan:Connect(destroy)
+UserInputService.InputBegan:Connect(destroy3)
 
-local function destroy(input)
+local function destroy4(input)
     if input.KeyCode == Enum.KeyCode.T then
         local backpack = player:FindFirstChild("Backpack")
         if backpack then
@@ -80,9 +80,9 @@ local function destroy(input)
         end
     end
 end
-UserInputService.InputBegan:Connect(destroy)
+UserInputService.InputBegan:Connect(destroy4)
 
-local function destroy(input)
+local function destroy5(input)
     if input.KeyCode == Enum.KeyCode.R then
         local backpack = player:FindFirstChild("Backpack")
         if backpack then
@@ -94,7 +94,8 @@ local function destroy(input)
         end
     end
 end
-UserInputService.InputBegan:Connect(destroy)
+UserInputService.InputBegan:Connect(destroy5)
+
 local function walkspeed24(input)
     if input.KeyCode == Enum.KeyCode.LeftControl then
         player.Character:FindFirstChild("Humanoid").WalkSpeed = 24.11
