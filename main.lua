@@ -4,7 +4,7 @@ local player = game.Players.LocalPlayer
 
 local function dupe(input)
     if input.KeyCode == Enum.KeyCode.Insert then
-        for _ = 1, 20 do
+        for _ = 1, 7 do
             local ohNumber1 = 27
             local ohString2 = "0:0:0:0"
             game:GetService("ReplicatedStorage").Item:FireServer(ohNumber1, ohString2)
